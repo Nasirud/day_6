@@ -1,0 +1,68 @@
+create table StuMas( Stucod int, StuName varchar(200));
+
+insert into StuMas( Stucod ,StuName ) values ( 1,'akhil')
+insert into StuMas( Stucod ,StuName ) values ( 2,'abc')
+insert into StuMas( Stucod ,StuName ) values ( 3,'pqr')
+insert into StuMas( Stucod ,StuName ) values ( 4,'xyz')
+
+
+
+
+
+create table DepMas( Depcod int, DepName varchar(200), Stucode int);
+
+insert into DepMas( Depcod ,DepName,Stucod ) values ( 1S2,'Chem',1);
+insert into DepMas( Depcod ,DepName,Stucod ) values ( 15,'Bio',2);
+insert into DepMas( Depcod ,DepName,Stucod ) values ( 17,'phy',4);
+insert into DepMas( Depcod ,DepName,Stucod ) values ( 20,'zoo',3);
+
+
+
+
+create table sample(ID int NOT NULL, Text varchar2(200) NOT NULL, Createdon Date default sysdate);
+
+insert into sample(ID, TEXT) values (1,'ABC');
+insert into sample(ID) values (2);
+
+select * from sample;
+
+create table sampletable(ID int NOT NULL, Text varchar2(200),samplevalue NUMBER(4,2),  Createdon Date default sysdate, constraint ID_UK UNIQUE(ID));
+select * from sampletable;
+insert into sampletable(ID,TEXT) values(1,'abc');
+insert into sampletable(ID,TEXT) values(1,'xyz');
+
+create table samplex(ID int Constraint ID_PK Primary key(ID), TEXT VARCHAR2(200) );
+
+
+
+alter table sample add(xvalue int);
+
+
+alter table sample modify(TEXT int);
+
+
+alter table sample drop COlUMN xvalue;
+
+
+RENAME sample to sample1;
+
+
+
+truncate table sample1;
+
+
+create table s1(ID int, TEXT varchar(200));
+
+insert into s1(ID,TEXT)  values(1, 'abc', 55.26);
+insert into s1(ID,TEXT)  values(2, 'lmn');
+insert into s1(ID,TEXT)  values(3, 'pqr');
+insert into s1(ID,TEXT)  values(4, 'xyz');
+
+select * from s1
+
+alter table s1 add(xval int);
+
+
+reate table empcopyvas select EMPLOYEE_ID,FIRST_NAME,LAST_NAME,DEPARTMENT_ID
+
+
